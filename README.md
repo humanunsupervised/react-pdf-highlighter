@@ -8,7 +8,7 @@
 data format is independent of the viewport, making it suitable for saving on the
 server.
 
-### Example (Create React App)
+### Example
 
 For online example check https://agentcooper.github.io/react-pdf-highlighter/.
 
@@ -19,15 +19,14 @@ npm install
 npm start
 ```
 
-While docs are in progress, feel free to check the source annotated with Flow
-type signatures.
+Create React App example is available in [`./create-react-app-example`](https://github.com/agentcooper/react-pdf-highlighter/tree/master/create-react-app-example). Make sure to run `npm install` there as well.
 
 ### Installation
 
 `npm install react-pdf-highlighter`
 
 See
-[`packages/example/src/App.js`](https://github.com/agentcooper/react-pdf-highlighter/blob/master/packages/example/src/App.js)
+[`./example/src/App.tsx`](https://github.com/agentcooper/react-pdf-highlighter/blob/master/example/src/App.tsx)
 for React component API example.
 
 ### Prior art
@@ -55,7 +54,7 @@ See also:
 
 ##### Can I get a new PDF with the highlights embedded into the document?
 
-No, but [pdf-annotation-service](https://github.com/agentcooper/pdf-annotation-service) might be helpful for you.
+Take a look at https://pdf-lib.js.org.
 
 ##### Wasn't this named react-pdf-annotator at some point?
 
@@ -69,50 +68,3 @@ Please check the [CORS headers](https://developer.mozilla.org/en-US/docs/Web/HTT
 
 Works in Google Chrome, Safari 10+, Firefox 52+. Not tested in Internet
 Explorer.
-
-### Contributing
-
-To publish a new version:
-
-```
-npx lerna version
-
-cd ./packages/react-pdf-highlighter
-npm publish
-```
-
-# PDF.js worker thread
-
-The default worker is an inline "fake" worker. To improve performance, either add the worker-loader (preferred) to your webpack config or use the inline loader syntax.
-
-#### Webpack config example snippet
-
-> Use this if have your own config
-
-```js
-{
-  ...
-  module: {
-    rules: [
-      {
-        test: /\.worker\.js$/,
-        use: 'worker-loader',
-      },
-      ...
-    ]
-  }
-}
-```
-
-#### Inline Webpack-loader syntax
-
-> Use in Create React App projects
-
-```js
-import PDFWorker from "worker-loader!pdfjs-dist/lib/pdf.worker";
-
-import {setPdfWorker} from 'react-pdf-highlighter';
-
-setPdfWorker(PDFWorker);
-...
-```
