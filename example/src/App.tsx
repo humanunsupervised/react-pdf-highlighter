@@ -10,13 +10,15 @@ import {
 } from "./react-pdf-highlighter";
 
 import type { IHighlight, NewHighlight } from "./react-pdf-highlighter";
+// import "";
+
 
 import { testHighlights as _testHighlights } from "./test-highlights";
 import { Spinner } from "./Spinner";
 import { Sidebar } from "./Sidebar";
 
 import "./style/App.css";
-import "react-pdf-highlighter/build/styles.css";
+
 
 const testHighlights: Record<string, Array<IHighlight>> = _testHighlights;
 
@@ -76,7 +78,7 @@ class App extends Component<{}, State> {
     });
   };
 
-  scrollViewerTo = (highlight: any) => {};
+  scrollViewerTo = (highlight: any) => { };
 
   scrollToHighlightFromHash = () => {
     const highlight = this.getHighlightById(parseIdFromHash());
@@ -123,11 +125,11 @@ class App extends Component<{}, State> {
         } = h;
         return id === highlightId
           ? {
-              id,
-              position: { ...originalPosition, ...position },
-              content: { ...originalContent, ...content },
-              ...rest,
-            }
+            id,
+            position: { ...originalPosition, ...position },
+            content: { ...originalContent, ...content },
+            ...rest,
+          }
           : h;
       }),
     });

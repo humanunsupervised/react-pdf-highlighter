@@ -8,7 +8,7 @@ import { EventBus, PDFViewer, PDFLinkService } from "pdfjs-dist/web/pdf_viewer";
 
 import "pdfjs-dist/web/pdf_viewer.css";
 import "../style/pdf_viewer.css";
-import "../style/PdfHighlighter.css";
+import "../style/PdfHighlighter.module.css";
 import getBoundingRect from "../lib/get-bounding-rect";
 import getClientRects from "../lib/get-client-rects";
 import getAreaAsPng from "../lib/get-area-as-png";

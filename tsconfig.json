@@ -13,7 +13,8 @@
     "jsx": "react",
     "outDir": "./dist/esm",
     "isolatedModules": true,
-    "declaration": true
+    "declaration": true,
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
-  "include": ["./src"]
+  "include": ["./src", "Globals.d.ts"]
 }

@@ -4,7 +4,8 @@
     "target": "ESNext",
     "module": "ESNext",
     "lib": ["ESNext", "DOM"],
-    "noEmit": true
+    "noEmit": true,
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
   "include": ["./src"]
 }
