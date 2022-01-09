@@ -10,7 +10,7 @@ import {
 } from "pdfjs-dist/legacy/web/pdf_viewer";
 
 import "pdfjs-dist/web/pdf_viewer.css";
-import "../style/pdf_viewer.css";
+import "../style/pdf_viewer.module.css";
 
 import styles from "../style/PdfHighlighter.module.css";
 
