@@ -16,5 +16,5 @@
     "declaration": true,
     "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
-  "include": ["./src", "Globals.d.ts"]
+  "include": ["./src", "./src/Globals.d.ts"]
 }
